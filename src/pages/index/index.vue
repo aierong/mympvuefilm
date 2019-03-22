@@ -1,7 +1,6 @@
 <template>
   <div>
-
-    sy{{ msg }}
+    {{ msg }}
   </div>
 </template>
 
