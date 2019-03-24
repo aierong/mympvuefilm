@@ -1,19 +1,13 @@
 <template>
   <div>
     {{ msg }}
-    <br>
+    <br/>
     <button open-type="getUserInfo"
             lang="zh_CN"
-            @getuserinfo="onGotUserInfo">获取用户信息</button>
+            @getuserinfo="onGotUserInfo">获取用户信息
+    </button>
 
   </div>
-
-
-
-
-
-
-
 </template>
 
 <script>
@@ -33,12 +27,12 @@
         //console.log( data )
 
         if ( data.mp.detail.rawData ) {
-          console.log( '同意了' )
+          console.log( "同意了" );
         }
         else {
-          console.log( '拒绝' )
+          console.log( "拒绝" );
         }
-      } ,
+      }
     } ,
 
     created () {
@@ -50,15 +44,15 @@
 
       wx.getUserInfo( {
         success : ( data ) => {
-          console.log( data )
+          console.log( data );
         } ,
         fail : ( err ) => {
-          console.log( '获取失败' )
-          console.log( err )
+          console.log( "获取失败" );
+          console.log( err );
         }
-      } )
+      } );
 
-    } ,
+    }
   };
 </script>
 
