@@ -6,10 +6,12 @@
 <!-- html代码片段 -->
 <template>
 
-  <div>
-    list
+  <div class="listContainer">
 
-    <swiper>
+
+    <swiper indicator-dots
+            indicator-color="pink"
+            indicator-active-color="green">
       <swiper-item>
 
         <img src="/static/list/p1.jpg"
@@ -68,5 +70,8 @@
 
 <!-- 样式代码片段  scoped -->
 <style scoped>
-
+  .listContainer swiper img {
+    width: 100%;
+    height: 100%;
+  }
 </style>
