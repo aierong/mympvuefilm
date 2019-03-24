@@ -7,8 +7,9 @@
             lang="zh_CN"
             @getuserinfo="onGotUserInfo">获取用户信息
     </button>
-    <div v-else>
-      <img style="width: 100px;height: 100px;"
+    <div class="indexContainer" v-else>
+      <!--style="width: 100px;height: 100px;"-->
+      <img class="index_img"
            :src="userinfo.avatarUrl"
            alt=""/>
       <div style="text-align: center;">{{ userinfo.nickName }}</div>
@@ -63,7 +64,7 @@
       } ,
       dj () {
         const url = "../list/main"
-        wx.navigateTo({ url: url })
+        wx.navigateTo( { url : url } )
       } ,
     } ,
 
@@ -80,6 +81,16 @@
 </script>
 
 <style scoped>
+  .index_img {
+    width: 200rpx;
+    height: 200rpx;
+    border-radius: 100rpx !important;
+    margin: 100rpx 0;
+  }
 
-
+  .indexContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 </style>
