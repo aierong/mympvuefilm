@@ -6,33 +6,58 @@
 <!-- html代码片段 -->
 <template>
 
-  <div class="listContainer">
+  <div>
 
+    <div class="listContainer">
+      <swiper indicator-dots
+              indicator-color="pink"
+              indicator-active-color="green">
+        <swiper-item>
 
-    <swiper indicator-dots
-            indicator-color="pink"
-            indicator-active-color="green">
-      <swiper-item>
+          <img src="/static/list/p1.jpg"
+               alt=""/>
+        </swiper-item>
+        <swiper-item>
 
-        <img src="/static/list/p1.jpg"
-             alt=""/>
-      </swiper-item>
-      <swiper-item>
+          <img src="/static/list/p2.jpg"
+               alt=""/>
+        </swiper-item>
+        <swiper-item>
 
-        <img src="/static/list/p2.jpg"
-             alt=""/>
-      </swiper-item>
-      <swiper-item>
+          <img src="/static/list/p3.jpg"
+               alt=""/>
+        </swiper-item>
+        <swiper-item>
 
-        <img src="/static/list/p3.jpg"
-             alt=""/>
-      </swiper-item>
-      <swiper-item>
+          <img src="/static/list/p4.jpg"
+               alt=""/>
+        </swiper-item>
+      </swiper>
+    </div>
 
-        <img src="/static/list/p4.jpg"
-             alt=""/>
-      </swiper-item>
-    </swiper>
+    <div class="listContainerdemo1">
+      <swiper indicator-dots
+              indicator-color="pink"
+              indicator-active-color="green">
+        <swiper-item>
+          <img src="/static/images/detail/carousel/01.jpg"
+               alt=""/>
+        </swiper-item>
+        <swiper-item>
+          <img src="/static/images/detail/carousel/02.jpg"
+               alt=""/>
+        </swiper-item>
+        <swiper-item>
+          <img src="/static/images/detail/carousel/03.jpg"
+               alt=""/>
+        </swiper-item>
+        <swiper-item>
+          <img src="/static/images/detail/carousel/04.jpg"
+               alt=""/>
+        </swiper-item>
+      </swiper>
+
+    </div>
   </div>
 
 </template>
@@ -71,6 +96,11 @@
 <!-- 样式代码片段  scoped -->
 <style scoped>
   .listContainer swiper img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .listContainerdemo1 swiper img {
     width: 100%;
     height: 100%;
   }
