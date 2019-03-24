@@ -8,9 +8,12 @@
             @getuserinfo="onGotUserInfo">获取用户信息
     </button>
     <div v-else>
-      <img :src="userinfo.avatarUrl"
+      <img style="width: 100px;height: 100px;"
+           :src="userinfo.avatarUrl"
            alt=""/>
-      {{ userinfo.nickName }}
+      <div style="text-align: center;">{{ userinfo.nickName }}</div>
+      <br/><br/>
+      <button @click="dj">go to硅谷周刊</button>
     </div>
 
   </div>
@@ -57,6 +60,10 @@
             console.log( err );
           }
         } );
+      } ,
+      dj () {
+        const url = "../list/main"
+        wx.navigateTo({ url: url })
       } ,
     } ,
 

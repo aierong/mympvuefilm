@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/index/main",
-    "pages/counter/main"
+    "pages/counter/main",
+    "pages/list/main"
   ],
   "window": {
     "backgroundTextStyle": "light",
