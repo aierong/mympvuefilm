@@ -1,8 +1,9 @@
 <template>
   <div>
-    {{ msg }}
-    <br/>
-    <button open-type="getUserInfo"
+    <!--{{ msg }}-->
+    <br/><br/><br/>
+    <button v-if="!isShow"
+            open-type="getUserInfo"
             lang="zh_CN"
             @getuserinfo="onGotUserInfo">获取用户信息
     </button>
@@ -16,7 +17,8 @@
     data () {
       return {
         msg : "ss" ,
-        userinfo : {}
+        userinfo : {} ,
+        isShow : false
 
       };
     } ,
@@ -28,11 +30,28 @@
 
         if ( data.mp.detail.rawData ) {
           console.log( "同意了" );
+
+          this.getwxUserInfo();
         }
         else {
           console.log( "拒绝" );
         }
-      }
+      } ,
+      getwxUserInfo () {
+        wx.getUserInfo( {
+          success : ( data ) => {
+            console.log( data );
+
+            this.userinfo = data.userInfo;
+
+            this.isShow = true;
+          } ,
+          fail : ( err ) => {
+            console.log( "获取失败" );
+            console.log( err );
+          }
+        } );
+      } ,
     } ,
 
     created () {
@@ -42,16 +61,7 @@
     mounted () {
       //console.log( 'mounted' )
 
-      wx.getUserInfo( {
-        success : ( data ) => {
-          console.log( data );
-        } ,
-        fail : ( err ) => {
-          console.log( "获取失败" );
-          console.log( err );
-        }
-      } );
-
+      this.getwxUserInfo();
     }
   };
 </script>
