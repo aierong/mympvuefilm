@@ -8,6 +8,29 @@
 
   <div>
     list
+
+    <swiper>
+      <swiper-item>
+
+        <img src="/static/list/p1.jpg"
+             alt=""/>
+      </swiper-item>
+      <swiper-item>
+
+        <img src="/static/list/p2.jpg"
+             alt=""/>
+      </swiper-item>
+      <swiper-item>
+
+        <img src="/static/list/p3.jpg"
+             alt=""/>
+      </swiper-item>
+      <swiper-item>
+
+        <img src="/static/list/p4.jpg"
+             alt=""/>
+      </swiper-item>
+    </swiper>
   </div>
 
 </template>
