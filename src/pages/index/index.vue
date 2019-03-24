@@ -7,6 +7,11 @@
             lang="zh_CN"
             @getuserinfo="onGotUserInfo">获取用户信息
     </button>
+    <div v-else>
+      <img :src="userinfo.avatarUrl"
+           alt=""/>
+      {{ userinfo.nickName }}
+    </div>
 
   </div>
 </template>
@@ -28,6 +33,7 @@
       onGotUserInfo ( data ) {
         //console.log( data )
 
+        //判断用户是否点击了 允许
         if ( data.mp.detail.rawData ) {
           console.log( "同意了" );
 
