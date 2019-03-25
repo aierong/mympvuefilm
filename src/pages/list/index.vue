@@ -69,8 +69,11 @@
     </div>
 
     <div>
-      <ListTmp/>
-      <ListTmp/>
+      <ListTmp v-for="(item, index) in listTmp"
+               :key="index"
+               :item="item"
+               :index="index"/>
+
     </div>
   </div>
 
@@ -78,6 +81,8 @@
 
 <!-- js脚本代码片段 -->
 <script>
+  import { mapState } from 'vuex'
+
   import ListTmp from '@/components/list_template.vue'
 
   export default {
@@ -98,14 +103,16 @@
     } ,
     //计算属性
     computed : {
-      //name() {
-      //代码搞这里
-      //return this.data;
-      //}
+      //映射状态到本组件
+      ...mapState( [ 'listTmp' ] )
     } ,
     //生命周期(mounted)
     mounted () {
 
+    } ,
+    beforeMount () {
+      //分发 action 修改状态
+      this.$store.dispatch( 'getList' )
     } ,
   }
 </script>
@@ -122,3 +129,5 @@
     height: 100%;
   }
 </style>
+
+
