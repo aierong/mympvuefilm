@@ -5,7 +5,7 @@ import {
   decrement
 } from './mutation-type'
 
-import listData from '../datas/list-data'
+import listData from '@/datas/list-data'
 
 export default {
   getList ( { commit } ) {
