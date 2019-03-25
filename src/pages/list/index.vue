@@ -67,14 +67,22 @@
       </swiper>
 
     </div>
+
+    <div>
+      <ListTmp/>
+      <ListTmp/>
+    </div>
   </div>
 
 </template>
 
 <!-- js脚本代码片段 -->
 <script>
+  import ListTmp from '@/components/list_template.vue'
+
   export default {
     name : "index" ,
+    components : { ListTmp } ,
     //数据模型
     data () {
       return {
