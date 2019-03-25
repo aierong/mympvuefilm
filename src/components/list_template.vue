@@ -47,7 +47,8 @@
     methods : {
       toDetail () {
         //跳转到详情页 + 传参过去
-        wx.navigateTo( { url : '/pages/detail/main?index=' + this.index } );
+        //wx.navigateTo( { url : '/pages/detail/main?index=' + this.index } );
+        wx.navigateTo( { url : '../detail/main?index=' + this.index } );
       }
 
     } ,
@@ -67,23 +68,24 @@
 
 <!-- 样式代码片段  scoped -->
 <style scoped>
-  .tmpContainer{
+  .tmpContainer {
     display: flex;
     flex-direction: column;
-    border-bottom: 1rpx solid#eee;
+    border-bottom: 1rpx solid #eee;
   }
 
   .avatar_data {
-    padding:10rpx;
+    padding: 10rpx;
   }
 
-  .avatar_data img{
+  .avatar_data img {
     width: 60rpx;
     height: 60rpx;
     vertical-align: middle;
     margin-right: 10rpx;
   }
-  .avatar_data span{
+
+  .avatar_data span {
     font-size: 28rpx;
     color: #333;
   }
@@ -98,14 +100,15 @@
     width: 100%;
     height: 460rpx;
   }
-  .content{
+
+  .content {
     font-size: 32rpx;
     text-indent: 32rpx;
     line-height: 50rpx;
     letter-spacing: 3rpx;
   }
 
-  .view_star_container img{
+  .view_star_container img {
     width: 32rpx;
     height: 32rpx;
     vertical-align: middle;
