@@ -9,7 +9,17 @@
   <div>
 
     <div class="listContainer">
+      <!--
+
+    swiper api:  https://developers.weixin.qq.com/miniprogram/dev/component/swiper.html
+
+      indicator-dots		        是否显示面板指示点
+      indicator-color		        指示点颜色
+      indicator-active-color		当前选中的指示点颜色
+      autoplay	       Boolean		是否自动切换(默认:false)
+      -->
       <swiper indicator-dots
+              autoplay="true"
               indicator-color="pink"
               indicator-active-color="green">
         <swiper-item>
@@ -36,24 +46,23 @@
     </div>
 
     <div class="listContainerdemo1">
+
       <swiper indicator-dots
+              autoplay="true"
               indicator-color="pink"
               indicator-active-color="green">
         <swiper-item>
-          <img src="/static/images/detail/carousel/01.jpg"
-               alt=""/>
+          <!--这里用的是微信小程序自带的图片组件 image-->
+          <image src="/static/images/detail/carousel/01.jpg"/>
         </swiper-item>
         <swiper-item>
-          <img src="/static/images/detail/carousel/02.jpg"
-               alt=""/>
+          <image src="/static/images/detail/carousel/02.jpg"/>
         </swiper-item>
         <swiper-item>
-          <img src="/static/images/detail/carousel/03.jpg"
-               alt=""/>
+          <image src="/static/images/detail/carousel/03.jpg"/>
         </swiper-item>
         <swiper-item>
-          <img src="/static/images/detail/carousel/04.jpg"
-               alt=""/>
+          <image src="/static/images/detail/carousel/04.jpg"/>
         </swiper-item>
       </swiper>
 
@@ -100,7 +109,7 @@
     height: 100%;
   }
 
-  .listContainerdemo1 swiper img {
+  .listContainerdemo1 swiper image {
     width: 100%;
     height: 100%;
   }
