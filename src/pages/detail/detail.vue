@@ -24,9 +24,9 @@
         <img @tap="handleCollection"
              :src="isCollected?'/static/images/icon/collection.png':'/static/images/icon/collection-anti.png'"
              alt=""/>
-        <!--<img @tap="handleShare"-->
-        <!--src="/static/images/icon/share-anti.png"-->
-        <!--alt=""/>-->
+        <img @tap="handleShare"
+             src="/static/images/icon/share-anti.png"
+             alt=""/>
       </div>
       <div class="line"></div>
     </div>
@@ -56,8 +56,21 @@
     } ,
     //方法
     methods : {
+      handleShare () {
+        let arr = [ "分享到朋友圈" , "分享到微博" , "分享给微信好友" ];
+
+        wx.showActionSheet( {
+          itemList : arr , //按钮的文字数组，数组长度最大为6个,
+          itemColor : '#000000' , //按钮的文字颜色,
+          success : res => {
+            let txt = arr[ res.tapIndex ];
+
+            console.log( txt )
+          }
+        } );
+      } ,
       handleCollection () {
-        //修改状态
+        //修改 收藏 状态
 
         let title = this.isCollected ? '取消收藏' : '收藏成功'
 
