@@ -4,7 +4,8 @@
     "pages/counter/main",
     "pages/list/main",
     "pages/detail/main",
-    "pages/movies/main"
+    "pages/movies/main",
+    "pages/movieDetail/main"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -38,9 +38,9 @@
     } ,
     //方法
     methods : {
-      //methodsname() {
-      //代码搞这里
-      //},
+      toMovieDetal ( index ) {
+        wx.navigateTo( { url : '/pages/movieDetail/main?index=' + index } );
+      },
 
     } ,
     //计算属性
