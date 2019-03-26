@@ -58,10 +58,10 @@
     methods : {
       handleCollection () {
         //修改状态
-        this.isCollected = !this.isCollected;
-        let title = this.isCollected ? '收藏成功' : '取消收藏'
 
-        if ( this.isCollected ) {
+        let title = this.isCollected ? '取消收藏' : '收藏成功'
+
+        if ( !this.isCollected ) {
           wx.setStorageSync( this.CollectStorageName , this.CollectStorageName )
         }
         else {
@@ -69,16 +69,23 @@
           wx.removeStorageSync( this.CollectStorageName )
         }
 
+        this.isCollected = !this.isCollected;
+
         wx.showToast( {
           title : title , //提示的内容,
           icon : 'success' , //图标,
           duration : 2000 , //延迟时间,
           mask : true , //显示透明蒙层，防止触摸穿透,
           success : res => {
+            console.log( res )
           }
         } );
 
         // 之前代码 先屏蔽
+
+        // this.isCollected = !this.isCollected;
+        // let title = this.isCollected ? '收藏成功' : '取消收藏'
+
         // wx.showToast( {
         //   title : title , //提示的内容,
         //   icon : 'success' , //图标,
