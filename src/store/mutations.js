@@ -8,11 +8,11 @@ import {
 export default {
   [ RECEIVE_LIST ] ( state , { list_data } ) {
     state.listTmp = list_data
-    console.log( state )
+    // console.log( state )
   } ,
   [ MOVIES_ARR ] ( state , data ) {
     state.moviesArr = data
-    console.log( state )
+    // console.log( state )
   } ,
   [ increment ] ( state ) {
     const obj = state
