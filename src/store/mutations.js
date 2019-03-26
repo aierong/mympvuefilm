@@ -12,7 +12,7 @@ export default {
   } ,
   [ MOVIES_ARR ] ( state , data ) {
     state.moviesArr = data
-    console.log( state )
+    // console.log( state )
   } ,
   [ increment ] ( state ) {
     const obj = state
