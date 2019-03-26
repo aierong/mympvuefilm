@@ -3,7 +3,8 @@
     "pages/index/main",
     "pages/counter/main",
     "pages/list/main",
-    "pages/detail/main"
+    "pages/detail/main",
+    "pages/movies/main"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -20,14 +21,14 @@
       {
         "text": "首页",
         "pagePath": "pages/index/main",
-        "iconPath": "static/tabs/home.png",
-        "selectedIconPath": "static/tabs/home-active.png"
+        "iconPath": "/static/images/tab/yuedu.png",
+        "selectedIconPath": "/static/images/tab/yuedu_hl.png"
       },
       {
-        "text": "订单",
-        "pagePath": "pages/counter/main",
-        "iconPath": "static/tabs/orders.png",
-        "selectedIconPath": "static/tabs/orders-active.png"
+        "pagePath": "pages/movies/main",
+        "text": "电影频道",
+        "iconPath": "/static/images/tab/dianying.png",
+        "selectedIconPath": "/static/images/tab/dianying_hl.png"
       }
     ],
     "position": "bottom"
