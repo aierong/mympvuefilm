@@ -41,7 +41,7 @@
   import { mapState } from 'vuex'
 
   export default {
-    name : "index" ,
+    name : "detail" ,
     //数据模型
     data () {
       return {
@@ -152,7 +152,7 @@
 </script>
 
 <!-- 样式代码片段  scoped -->
-<style src="./index.css"
+<style src="./detail.css"
        scoped>
 
 </style>
