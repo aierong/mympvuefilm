@@ -1,0 +1,12 @@
+.index_img {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 100rpx !important;
+  margin: 100rpx 0;
+}
+
+.indexContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

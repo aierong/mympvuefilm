@@ -86,7 +86,7 @@
   import ListTmp from '@/components/list_template.vue'
 
   export default {
-    name : "index" ,
+    name : "list" ,
     components : { ListTmp } ,
     //数据模型
     data () {
@@ -118,16 +118,9 @@
 </script>
 
 <!-- 样式代码片段  scoped -->
-<style scoped>
-  .listContainer swiper img {
-    width: 100%;
-    height: 100%;
-  }
+<style src="./list.css"
+       scoped>
 
-  .listContainerdemo1 swiper image {
-    width: 100%;
-    height: 100%;
-  }
 </style>
 
 
