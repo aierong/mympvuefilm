@@ -51,7 +51,7 @@
 
     } ,
     beforeMount () {
-      this.movieDetail = this.moviesArr[ this.$mp.query.index ]
+      this.movieDetail = this.moviesArr
     } ,
   }
 </script>

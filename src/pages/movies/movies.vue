@@ -8,6 +8,7 @@
 
   <div>
     <div @tap="toMovieDetal(index)"
+         :key="index"
          v-for="(item,index) in moviesArr"
          class="moviesContainer">
       <img class="movies_img"
@@ -39,8 +40,10 @@
     //方法
     methods : {
       toMovieDetal ( index ) {
+        this.$store.dispatch( 'getMoviesArr' , this.moviesArr[ index ] )
+
         wx.navigateTo( { url : '/pages/movieDetail/main?index=' + index } );
-      },
+      } ,
 
     } ,
     //计算属性
@@ -60,7 +63,7 @@
       .then( ( resp ) => {
         // console.log(movies)
         this.moviesArr = resp.data.subjects
-        this.$store.dispatch( 'getMoviesArr' , this.moviesArr )
+
       } )
       .catch( ( error ) => {
         console.log( error )
