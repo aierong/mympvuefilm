@@ -1,0 +1,71 @@
+.detailContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail_img {
+  width: 100%;
+  height: 460rpx;
+}
+
+.avatar_data {
+  padding: 10rpx
+}
+
+.avatar_data img {
+  width: 64rpx;
+  height: 64rpx;
+  vertical-align: middle;
+}
+
+.avatar_data span {
+  font-weight: 24rpx;
+  margin-left: 6rpx;
+}
+
+.company {
+  font-size: 32rpx;
+  font-weight: bold;
+  padding: 10rpx;
+}
+
+.collection_share {
+  float: right;
+  margin-right: 30rpx;
+}
+
+.collection_share img {
+  width: 90rpx;
+  height: 90rpx;
+  margin-right: 20rpx;
+}
+
+.collection_share_container {
+  position: relative;
+}
+
+.line {
+  position: absolute;
+  top: 45rpx;
+  left: 5%;
+  width: 90%;
+  height: 1rpx;
+  background: #eee;
+  z-index: -1
+}
+
+.content {
+  font-size: 32rpx;
+  text-indent: 32rpx;
+  line-height: 50rpx;
+  letter-spacing: 3rpx;
+}
+
+.music_img {
+  height: 60rpx;
+  width: 60rpx;
+  position: absolute;
+  top: 200rpx;
+  left: 50%;
+  margin-top: -30rpx;
+}
