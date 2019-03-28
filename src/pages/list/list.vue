@@ -61,9 +61,7 @@
         <swiper-item>
           <image src="/static/images/detail/carousel/03.jpg"/>
         </swiper-item>
-<!--        <swiper-item>-->
-<!--          <image src="/static/images/detail/carousel/04.jpg"/>-->
-<!--        </swiper-item>-->
+
       </swiper>
 
     </div>
