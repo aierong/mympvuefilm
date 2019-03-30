@@ -10,7 +10,10 @@
     <img class="detail_img"
          :src="isMusicPlay?detailObj.music.coverImgUrl:detailObj.detail_img"
          alt=""/>
-    <!--<img @tap="handleMusicPlay" class="music_img" :src="isMusicPlay?'/static/images/music/music-start.png':'/static/images/music/music-stop.png'" alt="">-->
+    <img @tap="handleMusicPlay"
+         class="music_img"
+         :src="isMusicPlay?'/static/images/music/music-start.png':'/static/images/music/music-stop.png'"
+         alt="">
     <div class="avatar_data">
       <img :src="detailObj.avatar"
            alt=""/>
@@ -39,6 +42,7 @@
 <!-- js脚本代码片段 -->
 <script>
   import { mapState } from 'vuex'
+  import isPlayObj from '../../datas/isPlay'
 
   export default {
     name : "detail" ,
@@ -68,6 +72,20 @@
             console.log( txt )
           }
         } );
+      } ,
+      handleMusicPlay () {
+        this.isMusicPlay = !this.isMusicPlay;
+        let { dataUrl , title } = this.detailObj.music
+
+        if ( this.isMusicPlay ) {
+          wx.playBackgroundAudio( {
+            dataUrl ,
+            title
+          } )
+        }
+        else {
+          wx.pauseBackgroundAudio()
+        }
       } ,
       handleCollection () {
         //修改 收藏 状态
@@ -165,6 +183,29 @@
         //如果key的值不存在，就会运行这里
         this.isCollected = false;
       }
+
+      //判读当前页面加载的时候 音乐是否在播放
+      if ( isPlayObj.pageIndex === this.index && isPlayObj.isPlay ) {
+        this.isMusicPlay = true
+      }
+      else {
+        this.isMusicPlay = false
+      }
+
+      //监听音乐的播放和暂停
+      wx.onBackgroundAudioPlay( () => {
+        console.log( "music start" )
+        this.isMusicPlay = true
+        isPlayObj.pageIndex = this.index
+        isPlayObj.isPlay = this.isMusicPlay
+      } );
+
+      wx.onBackgroundAudioPause( () => {
+        console.log( "music stop" )
+        this.isMusicPlay = false
+        // isPlayObj.pageIndex = this.index
+        isPlayObj.isPlay = this.isMusicPlay
+      } )
     }
   }
 
