@@ -7,6 +7,9 @@
     "pages/movies/main",
     "pages/movieDetail/main"
   ],
+  "requiredBackgroundModes": [
+    "audio"
+  ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#489B81",
