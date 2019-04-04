@@ -67,7 +67,7 @@
 </script>
 
 <!-- 样式代码片段  scoped -->
-<style scoped>
+<style  scoped         >
   .tmpContainer {
     display: flex;
     flex-direction: column;
@@ -120,4 +120,5 @@
     color: #333;
     margin-left: 10rpx;
   }
+
 </style>
