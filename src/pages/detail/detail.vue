@@ -46,6 +46,22 @@
 
   export default {
     name : "detail" ,
+    onShareAppMessage ( res ) {
+      // console.log( res );
+
+      // if ( res.from === 'button' ) {
+      //   // 来自页面内转发按钮
+      //   console.log( res.target )
+      // }
+      let url = '/pages/detail/main?index=' + this.index;
+      console.log( url )
+
+      return {
+        title : '自定义转发标题' ,
+        path : url ,
+        imageUrl : '/static/images/tab/yuedu.png'
+      }
+    } ,
     //数据模型
     data () {
       return {
@@ -60,6 +76,7 @@
     } ,
     //方法
     methods : {
+
       handleShare () {
         let arr = [ "分享到朋友圈" , "分享到微博" , "分享给微信好友" ];
 
