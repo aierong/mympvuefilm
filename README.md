@@ -16,6 +16,17 @@ mpvue实现微信小程序
      
 ```
 
+功能预览:     
 
-功能预览:   
+![](mdresourcefile/ui1.png)
+
+
+
+![](mdresourcefile/ui2.png)
+
+
+
+![](mdresourcefile/ui3.png)
+
+
 
