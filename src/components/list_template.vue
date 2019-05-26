@@ -10,7 +10,7 @@
        class="tmpContainer">
     <div class="avatar_data">
       <img :src="item.avatar"
-           alt="">
+           alt=""/>
       <span>{{item.date}}</span>
     </div>
     <p class="company">{{item.title}}</p>
@@ -67,58 +67,6 @@
 </script>
 
 <!-- 样式代码片段  scoped -->
-<style  scoped         >
-  .tmpContainer {
-    display: flex;
-    flex-direction: column;
-    border-bottom: 1rpx solid #eee;
-  }
-
-  .avatar_data {
-    padding: 10rpx;
-  }
-
-  .avatar_data img {
-    width: 60rpx;
-    height: 60rpx;
-    vertical-align: middle;
-    margin-right: 10rpx;
-  }
-
-  .avatar_data span {
-    font-size: 28rpx;
-    color: #333;
-  }
-
-  .compnay {
-    font-size: 40rpx;
-    font-weight: bold;
-    padding: 10rpx;
-  }
-
-  .detail_img {
-    width: 100%;
-    height: 460rpx;
-  }
-
-  .content {
-    font-size: 32rpx;
-    text-indent: 32rpx;
-    line-height: 50rpx;
-    letter-spacing: 3rpx;
-  }
-
-  .view_star_container img {
-    width: 32rpx;
-    height: 32rpx;
-    vertical-align: middle;
-    margin-left: 10rpx;
-  }
-
-  .view_star_container span {
-    font-size: 28rpx;
-    color: #333;
-    margin-left: 10rpx;
-  }
-
+<style scoped
+       src="./list_template.css">
 </style>
