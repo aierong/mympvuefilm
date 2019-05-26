@@ -9,7 +9,7 @@
     </button>
     <div class="indexContainer"
          v-else>
-      <!--style="width: 100px;height: 100px;"-->
+
       <img class="index_img"
            :src="userinfo.avatarUrl"
            alt=""/>
@@ -83,5 +83,4 @@
 
 <style src="./index.css"
        scoped>
-
 </style>

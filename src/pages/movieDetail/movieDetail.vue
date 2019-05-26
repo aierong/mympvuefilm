@@ -59,5 +59,4 @@
 <!-- 样式代码片段  scoped -->
 <style src="./movieDetail.css"
        scoped>
-
 </style>

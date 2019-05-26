@@ -38,5 +38,4 @@
 
 <style scoped
        src="./index.css">
-
 </style>

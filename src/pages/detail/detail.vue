@@ -232,5 +232,4 @@
 <!-- 样式代码片段  scoped -->
 <style src="./detail.css"
        scoped>
-
 </style>

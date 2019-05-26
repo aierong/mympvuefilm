@@ -118,7 +118,6 @@
 <!-- 样式代码片段  scoped -->
 <style src="./list.css"
        scoped>
-
 </style>
 
 

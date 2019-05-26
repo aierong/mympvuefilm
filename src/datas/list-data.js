@@ -148,4 +148,6 @@ let list_data = [
   } ,
 ];
 
-module.exports = { list_data };
+module.exports = {
+  list_data
+};
